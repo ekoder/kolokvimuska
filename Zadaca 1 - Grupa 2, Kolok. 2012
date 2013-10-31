@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main (){
+int cas, minuta, sekunda;
+char znak;
+printf("Vnesi vreme vo internacionalna forma: ");
+scanf("%c %d %d %d", &znak, &cas, &minuta, &sekunda);
+if (znak == 'P')
+    {
+    if (cas == 12)
+        printf("%d:%02d:%02d", cas, minuta, sekunda);
+    if (cas < 12)
+        printf("%d:%02d:%02d", cas+12, minuta, sekunda);
+
+    }
+if (znak == 'A')
+    {
+    if (cas == 12)
+        printf("%d:%02d:%02d", cas-12, minuta, sekunda);
+    if (cas < 12)
+        printf("%d:%02d:%02d", cas, minuta, sekunda);
+    }
+return 0;
+}
